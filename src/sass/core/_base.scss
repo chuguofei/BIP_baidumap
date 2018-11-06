@@ -1,0 +1,213 @@
+/*  Structure
+   ========================================================================== */
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+}
+
+html {
+  font-size: 625%;
+}
+
+body {
+  min-height: 100%;
+  margin: 0;
+  position: relative;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  color: rgba(#000, .87);
+  font-family: $font-roboto;
+  @extend .md-body-1;
+}
+
+//scrollbar
+::-webkit-scrollbar-track {
+  background-clip: padding-box;
+  border: solid transparent;
+  border-width: 0 0 0 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  background-clip: padding-box;
+  border: solid transparent;
+  border-width: 0px;
+  min-height: 28px;
+  padding: 100px 0 0;
+  -webkit-box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0.1), inset 0 -1px 0 rgba(0, 0, 0, 0.07);
+  box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0.1), inset 0 -1px 0 rgba(0, 0, 0, 0.07);
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+::-webkit-scrollbar {
+  height: 8px;
+  overflow: visible;
+  width: 8px;
+  background-color: transparent
+}
+
+:focus {
+  outline: none;
+}
+
+
+
+/*  Fluid Media
+   ========================================================================== */
+
+ul:not(.md-list)>li+li {
+  margin-top: 8px;
+}
+
+
+
+/*  Fluid Media
+   ========================================================================== */
+
+audio,
+img,
+// svg,
+object,
+embed,
+// canvas,
+video,
+iframe {
+  max-width: 100%;
+  vertical-align: middle;
+  &:not(.md-image) {
+    height: auto;
+  }
+}
+
+a {
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+
+
+/*  Suppress the focus outline on links that cannot be accessed via keyboard.
+    This prevents an unwanted focus outline from appearing around elements
+    that might still respond to pointer events.
+   ========================================================================== */
+
+[tabindex="-1"]:focus {
+  outline: none !important;
+}
+
+// classic clearfix
+.clearfix {
+  clear: both;
+}
+
+.hoverable {
+  transition: box-shadow .25s;
+  box-shadow: 0;
+}
+
+.hoverable:hover {
+  transition: box-shadow .25s;
+  box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+// Images
+img.responsive-img,
+video.responsive-video {
+  max-width: 100%;
+  height: auto;
+}
+
+
+
+/*******************
+  Utility Classes
+*******************/
+
+.hide {
+  display: none !important;
+}
+
+// Text Align
+.left-align {
+  text-align: left;
+}
+
+.right-align {
+  text-align: right
+}
+
+.center,
+.center-align {
+  text-align: center;
+}
+
+.left {
+  float: left !important;
+}
+
+.right {
+  float: right !important;
+}
+
+// No Text Select
+.no-select {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.circle {
+  border-radius: 50%;
+}
+
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.truncate {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.no-padding {
+  padding: 0 !important;
+}
+
+@mixin md-indent-mixin($ind) {
+  .md-indent-#{$ind} {
+    padding-left: (0.25*$ind)-0rem;
+  }
+}
+
+@include md-indent-mixin(0);
+@include md-indent-mixin(1);
+@include md-indent-mixin(2);
+@include md-indent-mixin(3);
+@include md-indent-mixin(4);
+@include md-indent-mixin(5);
+@include md-indent-mixin(6);
+@include md-indent-mixin(7);
+@include md-indent-mixin(8);
+@include md-indent-mixin(9);

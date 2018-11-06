@@ -1,0 +1,184 @@
+$primary:#09A8FA;
+$info:#2be963;
+$warning:#f4f700;
+$danger:#ed2b2b;
+.bip-modal{
+  transition: all .3s ease;
+  &.align-baseline{
+    align-items: baseline;
+  }
+  // display: none;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  -webkit-overflow-scrolling: touch;
+  outline: 0;
+}
+.bip-modal-background{
+  transition: opacity .3s ease;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: hsla(0,0%,4%,.86);
+}
+.media {
+  align-items: flex-start;
+  display: flex;
+  text-align: left;
+}
+.media-left, .media-number {
+  margin-right: 10px;
+}
+.media-left, .media-number, .media-right {
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.bip-modal-card{
+  box-shadow: 0 1px 4px rgba(0,0,0,0.5);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  max-height: calc(100vh - 40px);
+  overflow: hidden;
+}
+.bip-modal-card-head, .bip-modal-card-foot{
+  background-color: #fff;
+  padding: 16px;
+}
+.bip-modal-card-head{
+  border-bottom: 1px solid rgba(120,130,140,.13);
+}
+.mbip-odal-card-foot .is-primary:hover {
+  background-color: rgba($primary, 0.5);
+  text-decoration: none;
+  list-style-type:none;
+}
+.bip-modal-card-foot{
+  border-top: 1px solid rgba(120,130,140,.13);
+  justify-content: flex-end;
+  .button {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #dbdbdb;
+    border-radius: 3px;
+    color: #363636;
+    display: inline-flex;
+    font-size: 14px;
+    height: 32px;
+    justify-content: flex-start;
+    line-height: 24px;
+    padding-left: 8px;
+    padding-right: 8px;
+    position: relative;
+    vertical-align: top;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    justify-content: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+    white-space: nowrap;
+  }
+  .is-primary {
+    background-color: $primary;
+    border-width: 0;
+    color: #fff;
+  }
+}
+.bip-modal-card-title{
+  font-size: 16px;
+  font-weight: 100;
+  color: #363636;
+  flex-grow: 1;
+  flex-shrink: 0;
+  line-height: 1;
+}
+.align-baseline{
+  .bip-modal-card{
+    margin-top: 120px;
+  }
+}
+.bip-modal-enter {
+  opacity: 0;
+}
+
+.bip-modal-leave-active {
+  opacity: 0;
+}
+
+.bip-modal-enter .bip-modal-card,
+.bip-modal-leave-active .bip-modal-card {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+.close{
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 1;
+  color: #000;
+  text-shadow: 0 1px 0 #fff;
+  cursor: pointer;
+  filter: alpha(opacity=20);
+  opacity: .2;
+  font-family: Arial,sans-serif;
+}
+.close:focus, .close:hover{
+  filter: alpha(opacity=50);
+  opacity: .5;
+}
+.bip-modal-confirm .bip-modal-card .media-left {
+  font-size: 20px;
+}
+
+.bip-modal-confirm{
+  .bip-modal-card{
+    width: 400px;
+    .media{
+      &.is-primary{
+        .media-left{
+          color: $primary;
+        }
+      }
+      &.is-info{
+        .media-left{
+          color: $info;
+        }
+      }
+      &.is-warning{
+        .media-left{
+          color: $warning;
+        }
+      }
+      &.is-danger{
+        .media-left{
+          color: $danger;
+        }
+      }
+    }
+    .media-left{
+      font-size: 20px;
+    }
+    .media-content {
+      flex-grow: 1;
+      flex-shrink: 1;
+      text-align: left;
+    }
+  }
+}
+
+
+
+

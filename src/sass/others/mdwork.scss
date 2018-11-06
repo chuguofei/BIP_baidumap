@@ -1,0 +1,71 @@
+.md-work-dialog{
+  .md-dialog-actions{
+    border-top: 0.01rem solid #e0e0e0;
+    .md-table-pagination{
+      border-top:none;
+    }
+  }
+  .md-dialog{
+      min-width: 30%;
+      // height: 40%;
+      min-height: 30%;
+  }
+  .md-dialog-content{
+    background-attachment: inherit;
+  }
+  .md-dialog-actions:before{
+    display: none;
+  }
+
+  .md-theme-default.md-toolbar {
+    background-color: #005196;
+    color: rgba(255, 255, 255,1);
+  }
+  // .md-toolbar .md-theme-default{
+  //   background-color: #f36f21;
+  // }
+  .md-table-pagination .md-select{
+    margin: 0 .1rem;
+  }
+  .md-table-pagination .md-button{
+    min-width: .3rem;
+  }
+  .md-subheader {
+    min-height: .1rem;
+    padding: 0.15rem 0rem 0.01rem 0;
+    display: flex;
+    align-items: center;
+    flex-flow: row wrap;
+    color: rgba(0, 0, 0, 0.9);
+    font-size: .15rem;
+    font-weight: 400;
+  }
+  .md-radio {
+    width: auto;
+    margin: .03rem .06rem .01rem 0;
+    display: inline-flex;
+    position: relative;
+  }
+
+  .md-fab.md-fab-top-left, .md-speed-dial.md-fab-top-left {
+    top: 0.2rem;
+    left: 1.7rem;
+  }
+
+  .md-avatar.md-large {
+    width: 1rem;
+    min-width: 0.64rem;
+    height: 1rem;
+    min-height: 0.64rem;
+    border-radius: 1rem;
+    opacity: 0.6;
+}
+}
+@include layout-small{
+  .md-work-dialog .md-dialog{
+      max-height: 80%;
+      max-width: 80%;
+      width: 80%;
+      height: 80%;
+  }
+}

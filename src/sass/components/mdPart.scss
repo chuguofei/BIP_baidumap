@@ -1,0 +1,120 @@
+.md-part-toolbar {
+  background-color: #f5f5f5;
+  min-height: .36rem;
+  z-index: 1;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+
+  .md-part-toolbar-crumbs {
+    padding: 0 .16rem;
+    .md-part-toolbar-crumb {
+      color: #999;
+    }
+    .md-part-toolbar-crumb+.md-part-toolbar-crumb:before {
+      content: '\E5CC';
+      vertical-align: top;
+      display: inline-block;
+      font-family: 'Material Icons';
+      font-weight: normal;
+      font-style: normal;
+      font-size: .25rem;
+      margin: 0 .10rem 0 .08rem;
+      -webkit-font-smoothing: antialiased;
+    }
+  }
+  .md-part-toolbar-group {
+    .md-button {
+      margin: 0;
+      min-width: 0;
+      padding: 0 0.08rem;
+    }
+    a {
+      padding: 0 .16rem;
+      min-height: .36rem;
+      line-height: .36rem;
+      display: inline-block;
+    }
+    a:hover {
+      background-color: rgba(153, 153, 153, 0.2);
+    }
+    .md-input-container {
+      padding: 0px;
+      min-height: .36rem;
+
+      &.md-inset {
+        label {
+          font-size: inherit;
+        }
+        >.label {
+          min-width: inherit;
+        }
+      }
+    }
+  }
+  .md-part-toolbar-group+.md-part-toolbar-group:before {
+    content: ' ';
+    position: relative;
+    height: .20rem;
+    width: .01rem;
+    background: rgba(0, 0, 0, 0.12);
+    top: .08rem;
+    display: inline-block;
+  }
+}
+
+.md-part-body {
+  overflow: auto;
+  background-color: #fff;
+  position: relative;
+  &.md-no-scroll{
+    overflow: hidden;
+  }
+  &.md-transparent {
+    background-color: transparent;
+  }
+  .md-part-side {
+    box-shadow: 0 1px 5px rgba(0, 0, 0, .2), 0 2px 2px rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .12);
+    z-index: 1;
+    position: relative;
+    min-width:0;
+    max-width:0;
+
+    >.md-navigation {
+      display: none;
+      position: absolute;
+      top: 38%;
+      right: -0.13rem;
+      z-index: 1;
+      margin: 0;
+      padding: 0;
+    }
+    &.md-active {
+      display: block;
+      overflow: hidden;
+      min-width: 1.9rem;
+      max-width: 100%;
+      >.md-navigation{
+        right: -0.38rem;
+      }
+    }
+  }
+}
+
+.md-part {
+  >.md-content {
+    background: #fff;
+    &.md-transparent {
+      background-color: transparent;
+    }
+  }
+}
+
+
+@include layout-small {
+  .md-part-toolbar>.md-part-toolbar-pager,
+  .md-part-toolbar>.md-part-toolbar-crumbs {
+    display: none;
+  }
+  .md-part-body .md-part-side>.md-navigation{
+    display: block;
+  }
+}

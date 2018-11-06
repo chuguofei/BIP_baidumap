@@ -1,0 +1,15 @@
+.md-toast {
+    .md-snackbar-container {
+        position: relative;
+        overflow: hidden;
+    }
+    .md-snackbar-content{
+        overflow: auto;
+        max-height: 3rem;
+    }
+    .md-toast-close {
+        position: absolute;
+        right: 2px;
+        top: 2px;
+    }
+}

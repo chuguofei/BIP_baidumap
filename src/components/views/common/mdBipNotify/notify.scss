@@ -1,0 +1,117 @@
+$primary:#09A8FA;
+$info:#28CE57;
+$warning:rgba(247, 78, 0, 0.93);
+$danger:#ed2b2b;
+@media screen and (min-width: 769px){
+  .notifications {
+    max-width: 320px;
+  }
+}
+.notifications {
+  position: fixed;
+  top: 60px;
+  right: 0;
+  z-index: 1024 + 233;
+  pointer-events: none;
+
+  &.top-center{
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+  }
+  &.mid-center{
+    top:30%;
+    right: 25%;
+    left: 25%;
+    margin: 0 auto;
+  }
+  &.top-left{
+    right: auto;
+    left: 0;
+  }
+  &.bottom-left{
+    top: auto;
+    bottom: 20px;
+    right: auto;
+    left: 0;
+  }
+  &.bottom-center{
+    top: auto;
+    bottom: 20px;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+  }
+  &.bottom-right{
+    top: auto;
+    bottom: 20px;
+  }
+  .notification {
+    margin: 10px;
+    background-color: #f5f5f5;
+    border-radius: 3px;
+    padding: 16px 20px;
+    padding-left: 20px;
+    position: relative;
+    &.has-icon{
+      padding-left: 45px;
+    }
+    &.is-default{
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+      background-color: #fff;
+    }
+    .close{
+      float: right;
+      margin: -13px -14px 0 20px;
+      font-size: 21px;
+      font-weight: 700;
+      line-height: 1;
+      color: #000;
+      text-shadow: 0 1px 0 #fff;
+      cursor: pointer;
+      filter: alpha(opacity=20);
+      opacity: .2;
+      font-family: Arial,sans-serif;
+    }
+    &.bip-success {
+      background-color: rgba($info,0.9);
+      color: #fff;
+    }
+    &.bip-info {
+      background-color:rgba($primary,0.9);
+      color: #fff;
+    }
+    &.bip-warning {
+      background-color:$warning;
+      color: #fff;
+    }
+    &.bip-danger {
+      background-color: $danger;
+      color: #fff;
+    }
+  }
+
+  .alert {
+    position: relative;
+    min-width: 240px;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+    pointer-events: all;
+  }
+
+  span {
+    font-style: inherit;
+    font-weight: inherit;
+  }
+  .wrap-icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    margin-top: -11px;
+    width: 25px;
+    height: 25px;
+    }
+    *, *::after, *::before {
+        box-sizing: inherit;
+    }
+}

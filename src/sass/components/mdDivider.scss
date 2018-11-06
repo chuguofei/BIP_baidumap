@@ -1,0 +1,12 @@
+.md-divider {
+  height: .01rem;
+  margin: 0;
+  padding: 0;
+  display: block;
+  border: 0;
+  background-color: rgba(#000, .12);
+
+  &.md-inset {
+    margin-left: .72rem;
+  }
+}

@@ -1,0 +1,82 @@
+/*  Text and Titles
+   ========================================================================== */
+
+.md-caption {
+  font-size: .12rem;
+  font-weight: 400;
+  letter-spacing: .002em;
+  line-height: .17rem;
+}
+
+.md-body-1 {
+  font-size: .14rem;
+  font-weight: 400;
+  letter-spacing: .001em;
+  line-height: .20rem;
+}
+
+.md-body-2 {
+  font-size: .14rem;
+  font-weight: 500;
+  letter-spacing: .001em;
+  line-height: .24rem;
+}
+
+.md-subheading {
+  font-size: .16rem;
+  font-weight: 400;
+  letter-spacing: .001em;
+  line-height: .24rem;
+}
+
+.md-title {
+  font-size: .20rem;
+  font-weight: 500;
+  letter-spacing: .0005em;
+  line-height: .26rem;
+}
+
+.md-headline {
+  font-size: .24rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: .32rem;
+}
+
+.md-display-1 {
+  font-size: .34rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: .40rem;
+}
+
+.md-display-2 {
+  font-size: .45rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: .48rem;
+}
+
+.md-display-3 {
+  font-size: .56rem;
+  font-weight: 400;
+  letter-spacing: -.005em;
+  line-height: .58rem;
+}
+
+.md-display-4 {
+  font-size: 1.12rem;
+  font-weight: 300;
+  letter-spacing: -.001em;
+  line-height: 1.12rem;
+}
+
+
+/*  Links & Buttons
+   ========================================================================== */
+
+button {
+  &:focus {
+    outline: none;
+  }
+}

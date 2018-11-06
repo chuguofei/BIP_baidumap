@@ -1,0 +1,45 @@
+.md-chart {
+    min-width: 100%;
+}
+
+.md-chart-default {
+    .highcharts-title {
+        font-size: .18rem!important;
+        color: #000!important;
+        fill: #000!important;
+        margin: 5px!important;
+    }
+    .md-chart-yaxis {
+        color: #dddddd!important;
+        fill: #dddddd!important;
+    }
+    .md-chart-yaxis text {
+        fill: #666 !important;
+        font-size: 0.14rem !important;
+    }
+    .md-chart-xaxis {
+        color: #ddd!important;
+        fill: #ddd!important;
+    }
+    .md-chart-xaxis text {
+        fill: #666666 !important;
+        font-size: 0.14rem !important;
+    }
+    .md-chart-yaxis>highcharts-grid-line {
+        stroke: #ddd!important;
+    }
+    .md-chart-data-labels,
+    .md-chart-data-labels text {
+        font-size: .13rem!important;
+        font-weight: 500!important;
+    }
+    .highcharts-legend-item>text {
+        color: #666!important;
+        font-size: .13rem!important;
+        fill: #666!important;
+    }
+    .highcharts-legend-item>rect {
+        width: .1rem!important;
+        height: .1rem!important;
+    }
+}

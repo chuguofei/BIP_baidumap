@@ -1,0 +1,38 @@
+.md-button-toggle {
+  width: auto;
+  display: flex;
+
+  > .md-button {
+    margin: 0;
+    overflow: hidden;
+    border-width: 0.01rem 0 0.01rem 0.01rem;
+    border-radius: 0;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    &:first-child {
+      border-radius: 0.02rem 0 0 0.02rem;
+    }
+
+    &:last-child {
+      border-right-width: 0.01rem;
+      border-radius: 0 0.02rem 0.02rem 0;
+    }
+
+    &:not([disabled]) {
+      color: rgba(#000, .54);
+
+      &:hover:not(.md-toggle) {
+        &:not(.md-raised) {
+          background-color: rgba(#999, .2);
+          text-decoration: none;
+        }
+      }
+    }
+
+    .md-ink-ripple {
+      border-radius: $button-toggle-radius;
+    }
+  }
+}

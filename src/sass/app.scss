@@ -1,0 +1,12 @@
+// @import 'font-awesome/css/font-awesome.css';
+@import './variables';
+@import './core/core';
+@import './core/mixins';
+@import './components/component';
+@import './bill.scss';
+@import './message.scss';
+@import './others/mdwork.scss';
+
+.biphead{
+  height: 40px;
+}

@@ -1,0 +1,81 @@
+.md-chip {
+  height: $chip-height;
+  padding: .08rem .12rem;
+  display: inline-block;
+  border-radius: $chip-height;
+  transition: $swift-ease-out;
+  font-size: .13rem;
+  line-height: .16rem;
+  white-space: nowrap;
+
+  &.md-deletable {
+    position: relative;
+    padding-right: .32rem;
+  }
+
+  &:focus,
+  &:active {
+    outline: none;
+
+    &:not(.md-disabled) {
+      cursor: pointer;
+      box-shadow: $material-shadow-2dp;
+    }
+  }
+
+  &.md-disabled {
+    .md-button {
+      pointer-events: none;
+      cursor: default;
+    }
+  }
+
+  .md-button.md-delete {
+    width: $chip-icon-size;
+    min-width: $chip-icon-size;
+    height: $chip-icon-size;
+    min-height: $chip-icon-size;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: .4rem;
+    right: .4rem;
+    border-radius: $chip-icon-size;
+    transition: $swift-ease-out;
+
+    .md-icon {
+      width: $chip-icon-font;
+      min-width: $chip-icon-font;
+      height: $chip-icon-font;
+      min-height: $chip-icon-font;
+      margin: 0;
+      font-size: $chip-icon-font;
+    }
+
+    .md-ink-ripple {
+      border-radius: $chip-height;
+    }
+
+    .md-ripple {
+      opacity: .54;
+    }
+  }
+}
+
+.md-chips {
+  .md-chip {
+    margin-right: .08rem;
+    margin-bottom: .04rem;
+  }
+
+  .md-input-container {
+    min-height: .54rem;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .md-input {
+    width: 1.28rem;
+    flex: 1;
+  }
+}
